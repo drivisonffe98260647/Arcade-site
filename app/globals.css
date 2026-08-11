@@ -304,3 +304,80 @@ button { border: 0; cursor: pointer; color: inherit; }
   body { background:#02050c; }
   .app-shell { box-shadow:0 0 60px rgba(0,0,0,.5); }
 }
+
+
+.user-pill {
+  display:flex; align-items:center; gap:5px; padding:9px 10px;
+  border-radius:10px; background:#162b54; color:#dce9ff;
+  font-size:11px; font-weight:900; max-width:105px; overflow:hidden;
+}
+.user-pill svg { flex:none; }
+.modal-backdrop {
+  position:fixed; inset:0; z-index:120; display:grid; place-items:center;
+  padding:18px; background:rgba(0,0,0,.78); backdrop-filter:blur(6px);
+}
+.auth-modal {
+  position:relative; width:min(100%,390px); padding:28px 22px 22px;
+  border-radius:20px; background:#0d1730; border:1px solid rgba(93,154,255,.35);
+  box-shadow:0 25px 80px rgba(0,0,0,.55);
+}
+.modal-close {
+  position:absolute; top:12px; right:12px; width:40px; height:40px;
+  display:grid; place-items:center; border-radius:10px; background:rgba(255,255,255,.06);
+}
+.auth-icon {
+  width:58px; height:58px; margin:0 auto 12px; display:grid; place-items:center;
+  border-radius:18px; background:linear-gradient(135deg,#178cff,#2fe5ff);
+}
+.auth-modal h2 { text-align:center; margin:5px 0; font-size:24px; }
+.auth-modal > p { text-align:center; color:#8e9bb8; font-size:12px; margin:0 0 20px; }
+.auth-modal label { display:block; margin:12px 0; color:#b9c5df; font-size:11px; font-weight:800; }
+.auth-modal input {
+  width:100%; margin-top:6px; padding:13px 12px; border-radius:10px;
+  border:1px solid rgba(255,255,255,.1); outline:0; background:#121e39; color:#fff;
+}
+.auth-modal input:focus { border-color:#31bfff; }
+.auth-submit {
+  width:100%; margin-top:10px; padding:14px; border-radius:11px;
+  background:linear-gradient(135deg,#168dff,#39c7ff); color:#04101e; font-weight:1000;
+}
+.auth-modal small { display:block; margin-top:13px; text-align:center; color:#667491; font-size:9px; }
+
+.game-modal {
+  position:relative; width:min(100%,470px); padding:28px 18px 18px;
+  border-radius:22px; border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 25px 80px rgba(0,0,0,.6); overflow:hidden;
+  background:linear-gradient(150deg,#1c3b82,#0c1428);
+}
+.game-modal .game-tag { top:18px; left:18px; }
+.game-big-emoji {
+  text-align:center; font-size:85px; line-height:1; margin:8px 0;
+  filter:drop-shadow(0 10px 10px rgba(0,0,0,.35));
+}
+.game-modal h2 { text-align:center; margin:5px 0; font-size:24px; }
+.game-modal > p { text-align:center; color:#d6e0f6; font-size:12px; }
+.fake-game {
+  margin-top:18px; padding:14px; border-radius:16px; background:rgba(2,7,18,.72);
+  border:1px solid rgba(255,255,255,.08);
+}
+.fake-game-top { display:flex; justify-content:space-between; color:#7e91b5; font-size:9px; font-weight:900; }
+.slots {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:14px 0;
+}
+.slots span {
+  min-height:100px; display:grid; place-items:center; border-radius:12px;
+  background:linear-gradient(145deg,#162a54,#090f20); font-size:55px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.play-now {
+  width:100%; padding:13px; border-radius:11px; display:flex; justify-content:center;
+  align-items:center; gap:7px; background:linear-gradient(135deg,#19d76b,#6cff9b);
+  color:#04140b; font-weight:1000;
+}
+.demo-note { display:block; text-align:center; margin-top:12px; color:#71809e; font-size:9px; }
+.logout { color:#ff7d7d; margin-top:10px; }
+
+@media (max-width: 430px) {
+  .user-pill { max-width:82px; }
+  .user-pill { font-size:9px; }
+}
